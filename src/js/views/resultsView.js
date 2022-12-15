@@ -10,13 +10,6 @@ class ResultsView extends View {
     return this._data.map(this._generateMarkupPreview).join('');
   }
 
-  // addHandleLink(handler) {
-  //   document.querySelector('.preview').addEventListener('click', function (e) {
-  //     e.preventDefault();
-  //     const id = document.getElementById('preview').getAttribute('href');
-  //   });
-  // }
-
   _generateMarkupPreview(result) {
     return `
     <li class="preview">
@@ -26,12 +19,7 @@ class ResultsView extends View {
               </figure>
               <div class="preview__data">
                 <h4 class="preview__title">${result.title}</h4>
-                <p class="preview__publisher">#</p>
-                <div class="preview__user-generated">
-                  <svg>
-                    <use ></use>
-                  </svg>
-                </div>
+
               </div>
             </a>
           </li>`;

@@ -48,7 +48,7 @@ export const loadSearchResults = async function (query) {
     );
 
     const dataArray = Object.entries(data.response.results);
-    console.log(dataArray);
+    //console.log(dataArray);
 
     state.search.results = dataArray.map(story => {
       return {
@@ -58,7 +58,7 @@ export const loadSearchResults = async function (query) {
         id: story[1].id,
       };
     });
-    console.log(state.search.results);
+    //console.log(state.search.results);
   } catch (err) {
     throw err;
   }
